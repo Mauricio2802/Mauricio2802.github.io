@@ -44,6 +44,7 @@ nav a {
   background-color: khaki;
   color: black;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .title-container {

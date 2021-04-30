@@ -18,12 +18,13 @@ nav {
 /* Borrar despues */
 nav .saludo {
   position: absolute;
-  right: 50%;
-  top: 10px;
+  right: 45%;
+  top: 50px;
   color: white;
   font-size: 3rem;
   font-family: "Qwigley", "cursive";
 }
+/* Hasta aqui */
 
 nav a {
   font-size: 1.6rem;
@@ -57,6 +58,14 @@ nav a {
   border-radius: 5px;
 }
 
+/* Main */
+main {
+  width: 100%;
+  height: calc(100vh - 45px - 100px);
+  display: flex;
+  flex-direction: column;
+}
+
 .title-container {
   width: 100%;
   display: flex;
@@ -80,12 +89,12 @@ nav a {
   -webkit-box-shadow: -2px 5px 25px 2px rgba(172, 195, 207, 0.43);
   -moz-box-shadow: -2px 5px 25px 2px rgba(172, 195, 207, 0.43);
 }
-.title-main {
+.title-presentation {
   width: 500px;
   display: flex;
   flex-direction: column;
 }
-.title-main h1 {
+.title-presentation h1 {
   text-align: center;
   margin-top: 40px;
   line-height: 34px;
@@ -93,7 +102,7 @@ nav a {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: italic;
 }
-.title-main .title-main__author {
+.title-presentation .title-presentation__author {
   margin-top: 10px;
   font-size: 4rem;
   font-family: "Qwigley", "cursive";
@@ -102,81 +111,91 @@ nav a {
   align-self: flex-end;
 }
 
-/* Main */
-
-.main-container {
+/* Article Section */
+main .article-section {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-.main-container .articles {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  margin-left: 30px;
+main .article-section .recent-article {
+  width: 60%;
+  padding: 0 15px;
 }
-.main-container .articles .recent-article {
-  width: 70%;
-}
-.main-container .articles .recent-article h2 {
+main .article-section .recent-article h2 {
   margin-top: 30px;
   font-size: 2.5rem;
-  font-style: italic;
 }
-.main-container .articles .recent-article a {
-  width: 400px;
-  height: 300px;
+/* dimensiones - Tablet: 768px 
+width: 400px;
+*/
+main .article-section .recent-article a {
+  width: 300px;
   margin-top: 20px;
 }
-.main-container .articles .recent-article a img {
+main .article-section .recent-article a img {
   width: inherit;
   height: inherit;
   margin-top: inherit;
   border-radius: 20px;
   border: 1px solid black;
 }
+main .article-section .recent-article a img:hover {
+  box-shadow: 0px 0px 10px 5px rgba(235, 233, 233, 0.75);
+}
+main .article-section .recent-article .description {
+  font-size: 1.5rem;
+  padding: 0 5px;
+  margin-top: 10px;
+}
 
 /* Articulos mini */
-.main-container .articles .articles-mini {
+main .article-section .mini-articles-container {
+  width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-container .articles .articles-mini .articles-mini__title {
+main .article-section .mini-articles-container .mini-articles-container__title {
   margin-top: 20px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
-.main-container .articles .articles-mini .article-mini-container {
+main .article-section .mini-articles-container .mini-articles-image-container {
   display: flex;
-  height: 362px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  overflow-x: hidden;
-  overflow-y: auto;
+  justify-content: space-between;
+  margin-top: 10px;
 }
-.main-container .articles .articles-mini .article-mini-container .article-mini {
-  width: 135px;
-  height: 100px;
+main
+  .article-section
+  .mini-articles-container
+  .mini-articles-image-container
+  .mini-article {
+  margin-top: 10px;
+  width: 150px;
+  height: 85px;
   border: 1px solid black;
   border-radius: 10px;
 }
+.mini-article:hover {
+  box-shadow: 0px 0px 10px 5px rgba(235, 233, 233, 0.75);
+}
 
-.article-mini-container .art1 {
+.mini-articles-image-container .art1 {
   background-image: url("../images/ia.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.article-mini-container .art2 {
+.mini-articles-image-container .art2 {
   background-image: url("../images/neuralink.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.article-mini-container .art3 {
+.mini-articles-image-container .art3 {
   background-image: url("../images/data-science.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -185,50 +204,35 @@ nav a {
 
 /* Contact Section */
 
-.contact-container {
-  width: 150px;
+footer {
+  width: 100%;
+  height: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-}
-.contact-container .contact-title {
-  margin-top: 20px;
-  font-size: 1.6rem;
-  font-weight: 700;
 }
 
-/* Foto personal */
-.contact-container .foto-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-.contact-container .foto-container img {
-  width: 134px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: 1px solid black;
-  border-radius: 5px;
+footer .contact-title {
+  margin-left: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 /* Icon section */
-.contact-container .icon-container {
+footer .icon-container {
   width: inherit;
   height: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-  margin-top: 5px;
+  margin-left: 20px;
 }
 
-.contact-container .icon-container .icon {
+footer .icon-container .icon {
   width: 30px;
   height: 30px;
   border-radius: 6px;
+  margin: 6px;
 }
 .icon-container .icon a {
   width: inherit;
@@ -248,6 +252,7 @@ nav a {
 .icon-container .icon-gmail {
   width: 40px;
   height: 40px;
+  margin: 6px;
   border-radius: 6px;
   background-image: url("../images/icon-gmail.svg");
 }
